@@ -1,0 +1,436 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[export]{adjustbox}
+\usepackage{graphicx}
+\usepackage{float}
+\setkeys{Gin}{width=0.8\textwidth}
+
+\usepackage{caption}
+\captionsetup{font=small}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{longtable}
+\usepackage{geometry}
+\usepackage[brazil]{babel}
+
+\setcounter{section}{1}
+
+\geometry{margin=2.5cm}
+
+% ----------------------------------------------------------------------------------------
+
+% TRADUCAO DE COMANDOS %
+
+% ----------------------------------------------------------------------------------------
+
+\renewcommand{\chapterautorefname}{Capítulo}
+\renewcommand{\sectionautorefname}{Seção}
+\renewcommand{\subsectionautorefname}{Subseção}
+\renewcommand{\subsubsectionautorefname}{Subsubseção}
+\renewcommand{\figureautorefname}{Figura}
+\renewcommand{\tableautorefname}{Tabela}
+
+% ----------------------------------------------------------------------------------------
+
+% INTRODUCAO %
+
+% ----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\section*{\textbf{Plano de Teste do Sistema Figma}}
+\vspace{0.2cm}
+\small Última atualização: \today
+
+% ----------------------------------
+
+\section*{\large Dados do Projeto}
+\label{sec:plano_teste}
+
+\begin{itemize}
+    \item \textbf{Nome do sistema:} Figma
+    \item \textbf{Ambiente:} Web (Desktop)
+    \item \textbf{Responsável:} Ana Flavia de Castro Segadilha da Silva
+    \item \textbf{Objetivo do Plano:} Testar a funcionalidade das principais funções do Figma, garantindo que todos os casos testados funcionem conforme especificado neste documento.
+\end{itemize}
+
+% ----------------------------------
+
+\subsection{Escopo}
+\label{subsec:escopo_teste}
+O escopo deste plano de teste cobre ações feitas no Figma Design, como:
+\begin{itemize}
+    \item Criação e edição de arquivos;
+    \item Manipulação de frames e objetos;
+    \item Prototipação;
+    \item Comentários;
+    \item Movimentação e exclusão de arquivos;
+    \item Compartilhamento de links.
+\end{itemize}
+
+% ----------------------------------
+
+\subsubsection*{Fora do Escopo}
+\label{subsec:foraescopo_teste}
+\begin{itemize}
+    \item Uso de plugins ou integrações externas;
+    \item Funcionalidades de exportação;
+    \item Outras ferramentas do Figma.
+\end{itemize}
+
+% ----------------------------------
+
+\subsection{Estratégia de Teste}
+\label{subsec:estrategia_teste}
+Os testes serão executados manualmente, utilizando casos de teste e declarando pré-condições, passos a passo e resultados esperados definidos para cada um deles. 
+
+% ----------------------------------------------------------------------------------------
+
+% CASOS DE TESTE %
+
+% ----------------------------------------------------------------------------------------
+
+\section{Casos de Teste}
+\label{sec:casos_teste}
+
+Cada caso de teste possui pré-condições, resultados esperados e passos de execução detalhados. O plano contempla a criação, edição, prototipação e compartilhamento de arquivos de design, garantindo que o sistema se comporte conforme especificado.
+
+% ----------------------------------
+
+\subsection{Casos de Teste}
+\label{subsec:resumo_casos}
+
+\begin{longtable}{|p{1cm}|p{5cm}|p{4cm}|p{5cm}|}
+\hline
+\textbf{ID} & \textbf{Objetivo} & \textbf{Pré-condições} & \textbf{Resultado Esperado} \\ \hline
+CT1 & Criar um novo arquivo de design & Usuário autenticado, tela inicial carregada & Novo arquivo visível na lista de arquivos \\ \hline
+CT2 & Criar um novo frame & Arquivo de design aberto & Frame criado corretamente \\ \hline
+CT3 & Prototipar interações & Frame com objetos & Interações aplicadas corretamente \\ \hline
+CT4 & Adicionar objeto no frame & Frame criado & Objeto aparece no frame \\ \hline
+CT5 & Editar objeto no arquivo & Objeto existente selecionado & Objeto alterado conforme propriedades escolhidas \\ \hline
+CT6 & Comentar em algum objeto & Objeto existente selecionado & Comentário visível para todos usuários \\ \hline
+CT7 & Desenhar no arquivo & Editor aberto & Desenho aparece corretamente no canvas \\ \hline
+CT8 & Compartilhar link para visualização & Arquivo criado & Link ou permissão de visualização funcionando \\ \hline
+CT9 & Mover arquivo para uma equipe & Arquivo criado & Arquivo movido para pasta da equipe correta \\ \hline
+CT10 & Deletar arquivo & Arquivo criado & Arquivo enviado para lixeira e deletado permanentemente \\ \hline
+\end{longtable}
+
+% ----------------------------------
+
+\subsection{Casos de Teste Detalhados}
+\label{sec:casos_detalhados}
+
+% -------------------------------
+\subsubsection{CT1: Criar um novo arquivo de design}
+\label{subsubsec:ct1}
+
+\textbf{Pré-condições}
+
+\begin{itemize}
+    \item Usuário autenticado no Figma;
+    \item Tela inicial carregada corretamente.
+\end{itemize}
+
+\textbf{Passos a passo}
+
+\begin{enumerate}
+    \item Clique no botão \textit{Design} na tela inicial (\autoref{fig:tela_principal});
+    \item Aguarde o carregamento do editor, e o arquivo será criado.
+\end{enumerate}
+
+
+\textbf{Resultado esperado:} \\
+\vspace{0.2cm}
+O Figma cria um novo arquivo de design na lista de arquivos do usuário.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_principal.png}
+    \caption{Tela inicial do Figma}
+    \label{fig:tela_principal}
+\end{figure}
+
+% -------------------------------
+
+\subsubsection{CT2: Criar um novo \textit{frame}}
+\label{subsubsec:ct2}
+
+\textbf{Pré-condições}
+\begin{itemize}
+    \item Usuário autenticado no Figma;
+    \item Arquivo de design existe;
+    \item Arquivo de design aberto.
+\end{itemize}
+
+\textbf{Passos de execução}
+\begin{enumerate}
+    \item Clique no ícone de \textit{Frame};
+    \item Escolha um tamanho predefinido (ex.: iPhone 16);
+    \item Confirme a criação do frame. \\
+\end{enumerate}
+
+\textbf{Resultado esperado} \\
+\vspace{0.2cm}
+O frame é criado corretamente e aparece no painel de camadas.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design_frame.png}
+    \caption{Criação de um \textit{frame}}
+    \label{fig:tela_design_frame}
+\end{figure}
+
+% -------------------------------
+
+\subsubsection{CT3: Prototipação de interações}
+\label{subsubsec:ct3}
+
+
+\textbf{Pré-condições}
+\begin{itemize}
+    \item Usuário autenticado no Figma;
+    \item Arquivo de design existente;
+    \item Arquivo de design aberto;
+    \item Ao menos dois \textit{frames} criados.
+\end{itemize}
+
+\textbf{Passos de execução}
+\begin{enumerate}
+    \item Abra a aba \textit{Protótipo};
+    \item Clique no botão de interações;
+    \item Selecione gatilho, ação e destino;
+    \item Configure animação e comportamento no painel direito. \\
+\end{enumerate}
+
+\textbf{Resultado esperado} \\
+\vspace{0.2cm}
+As interações são aplicadas corretamente e podem ser visualizadas no modo de pré-visualização do protótipo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design_prototipo.png}
+    \caption{Criação de uma interação}
+    \label{fig:tela_design_prototipo}
+\end{figure}
+
+% -------------------------------
+
+\subsubsection{CT4: Adicionar objeto no \textit{frame}}
+\label{subsubsec:ct4}
+
+\textbf{Pré-condições}
+\begin{itemize}
+    \item Usuário autenticado no Figma;
+    \item Arquivo de design existente;
+    \item Arquivo de design aberto;
+    \item Ao menos um \textit{frame} existente.
+\end{itemize}
+
+\textbf{Passos de execução}
+\begin{enumerate}
+    \item Clique no ícone de objeto;
+    \item Escolha o tipo de objeto (ex.: retângulo);
+    \item Confirme a criação do objeto no \textit{frame}. \\
+\end{enumerate}
+
+\textbf{Resultado esperado} \\
+\vspace{0.2cm}
+Objeto criado corretamente e visível no \textit{frame}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design_objeto.png}
+    \caption{Criação de um objeto}
+    \label{fig:tela_design_objeto}
+\end{figure}
+
+% -------------------------------
+
+\subsubsection{CT5: Editar objeto no arquivo}
+\label{subsubsec:ct5}
+
+\textbf{Pré-condições}
+\begin{itemize}
+    \item Usuário autenticado no Figma;
+    \item Arquivo de design existente;
+    \item Arquivo de design aberto;
+    \item Ao menos um objeto existente.
+\end{itemize}
+
+\textbf{Passos de execução}
+\begin{enumerate}
+    \item Selecione o objeto;
+    \item Modifique propriedades (cor, tamanho, etc.);
+    \item Confirme alterações. \\
+\end{enumerate}
+
+\textbf{Resultado esperado} \\
+\vspace{0.2cm}
+Objeto alterado conforme as propriedades escolhidas.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design_editar.png}
+    \caption{Edição de um objeto}
+    \label{fig:tela_design_editar}
+\end{figure}
+
+% -------------------------------
+
+\subsubsection{CT6: Comentar em algum objeto}
+\label{subsubsec:ct6}
+
+\textbf{Pré-condições}
+\begin{itemize}
+    \item Usuário autenticado no Figma;
+    \item Arquivo de design existente;
+    \item Arquivo de design aberto;
+    \item Ao menos um frame ou objeto existente.
+\end{itemize}
+
+
+\textbf{Passos de execução}
+\begin{enumerate}
+    \item Clique no ícone de comentário;
+    \item Selecione o objeto;
+    \item Escreva e adicione o comentário. \\
+\end{enumerate}
+
+\textbf{Resultado esperado} \\
+\vspace{0.2cm}
+Comentário visível para todos usuários com acesso ao arquivo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design_comentario.png}
+    \caption{Criação de um \textit{comentário}}
+    \label{fig:tela_design_comentario}
+\end{figure}
+
+% -------------------------------
+
+\subsubsection{CT7: Desenhar no arquivo}
+\label{subsubsec:ct7}
+
+\textbf{Pré-condições}
+\begin{itemize}
+    \item Usuário autenticado no Figma;
+    \item Arquivo de design existente;
+    \item Arquivo de design aberto.
+\end{itemize}
+
+
+\textbf{Passos de execução}
+\begin{enumerate}
+    \item Clique na ferramenta de desenho;
+    \item Desenhe no \textit{canvas}. \\
+\end{enumerate}
+
+\textbf{Resultado esperado} \\
+\vspace{0.2cm}
+Desenhos aparecem corretamente no \textit{canvas} como vetores.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design_desenho.png}
+    \caption{Desenho em forma de vetor}
+    \label{fig:tela_design_desenho}
+\end{figure}
+
+% -------------------------------
+
+\subsubsection{CT8: Compartilhar link para visualização}
+\label{subsubsec:ct8}
+
+\textbf{Pré-condições}
+\begin{itemize}
+    \item Usuário autenticado no Figma;
+    \item Arquivo de design aberto.
+\end{itemize}
+
+\textbf{Passos de execução}
+\begin{enumerate}
+    \item Clique em “Compartilhar”;
+    \item Escreva o e-mail para quem deseja compartilhar;
+    \item Escolha as permissões de acesso (\autoref{fig:tela_design_opcoes});
+    \item Aperte no botão "Convidar". \\
+\end{enumerate}
+
+\textbf{Resultado esperado} \\
+\vspace{0.2cm}
+Arquivo compartilhado com sucesso, com as permissões corretas aplicadas e o novo usuário aparece na seção "quem tem acesso".
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design_opcoes.png}
+    \caption{Compartilhamento de Arquivos}
+    \label{fig:tela_design_opcoes}
+\end{figure}
+
+% -------------------------------
+
+\subsubsection{CT9: Mover arquivo para uma equipe}
+\label{subsubsec:ct9}
+
+
+\textbf{Pré-condições}
+\begin{itemize}
+    \item Usuário autenticado no Figma;
+    \item Arquivo de design existente;
+    \item Arquivo de design aberto.
+\end{itemize}
+
+
+\textbf{Passos de execução}
+\begin{enumerate}
+    \item Abra menu de compartilhamento;
+    \item Clique em “Mover Arquivo” (\autoref{fig:tela_design_opcoes});
+    \item Selecione equipe de destino (\autoref{fig:tela_design_mover}). \\
+\end{enumerate}
+
+\textbf{Resultado esperado} \\
+\vspace{0.2cm}
+Arquivo transferido para equipe e visível para os membros.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design_mover.png}
+    \caption{Menu de compartilhamento}
+    \label{fig:tela_design_mover}
+\end{figure}
+
+% -------------------------------
+
+\subsubsection{CT10: Deletar arquivo}
+\label{subsubsec:ct10}
+
+\textbf{Pré-condições}
+\begin{itemize}
+    \item Usuário autenticado no Figma;
+    \item Arquivo de design existente;
+    \item Arquivo de design aberto.
+\end{itemize}
+
+\textbf{Passos de execução}
+\begin{enumerate}
+    \item Selecione arquivo na tela inicial (\autoref{fig:tela_principal}) e clique em “Mover para lixeira”;
+    \item Abra a aba "Lixeira" e selecione o arquivo novamente (\autoref{fig:tela_design_excluir_permanentemente}) para excluir permanentemente. \\
+\end{enumerate}
+
+\textbf{Resultado esperado} \\
+\vspace{0.2cm}
+Arquivo removido e não pode ser recuperado.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design_excluir_permanentemente.png}
+    \caption{Menu da Lixeira}
+    \label{fig:tela_design_excluir_permanentemente}
+\end{figure}
+
+% ----------------------------------
+
+\end{document}
