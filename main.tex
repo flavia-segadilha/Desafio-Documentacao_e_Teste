@@ -1,0 +1,658 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[export]{adjustbox}
+\usepackage{graphicx}
+\usepackage{float}
+\setkeys{Gin}{width=0.8\textwidth}
+
+\usepackage{caption}
+\captionsetup{font=small}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage[brazil]{babel}
+
+\geometry{margin=2.5cm}
+
+% ----------------------------------------------------------------------------------------
+
+% TRADUCAO DE COMANDOS %
+
+% ----------------------------------------------------------------------------------------
+
+\renewcommand{\chapterautorefname}{Capítulo}
+\renewcommand{\sectionautorefname}{Seção}
+\renewcommand{\subsectionautorefname}{Subseção}
+\renewcommand{\subsubsectionautorefname}{Subsubseção}
+\renewcommand{\figureautorefname}{Figura}
+\renewcommand{\tableautorefname}{Tabela}
+
+% ----------------------------------------------------------------------------------------
+
+% PAGINA INICIAL %
+
+% ----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+    \title{
+        \centering
+        \vspace*{5cm}
+        \textbf{Manual do Usuário  Figma} \\
+        \vspace{0.5cm}
+        \large Desafio Documentação --- Processo Seletivo ADA
+        \vspace{1.2cm}
+    }
+    
+    \author{Ana Flavia de Castro Segadilha da Silva}
+    \date{\today}
+    
+    \vfill
+\end{titlepage}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+% ----------------------------------------------------------------------------------------
+
+% SUMARIO %
+
+% ----------------------------------------------------------------------------------------
+
+\tableofcontents
+\newpage
+
+% ----------------------------------------------------------------------------------------
+
+% LISTA DE FIGURAS %
+
+% ----------------------------------------------------------------------------------------
+
+\listoffigures
+\newpage
+
+% ----------------------------------------------------------------------------------------
+
+% INTRODUCAO %
+
+% ----------------------------------------------------------------------------------------
+\section{Introdução ao Sistema}
+\label{sec:introducao}
+
+\subsection{O que é o Figma}
+\label{subsec:figma}
+O Figma é uma plataforma web colaborativa para design e prototipação. Mais conhecido por sua aplicação na criação de interfaces, é também possível produzir integralmente materiais gráficos como slides, templates e outros recursos para diversas utilidades. \\
+
+
+Atualmente, o Figma possui 6 principais modos de uso: Design, onde é possível desenvolver designs de interfaces e a prototipação destes, FigJam, uma \textit{whiteboard} interativa e colaborativa, Slides, a plataforma de criação de slides do Figma, Buzz, em que são feitos designs para recursos digitais como publicações em redes sociais, Site, o recurso de design e publicação de sites no Figma, e Make, a ferramenta de IA que pode gerar e transformar os designs criados em protótipos funcionais com implementação em código editável.
+
+\vspace{1cm}
+
+% ----------------------------------
+
+\subsection{Qual problema resolve}
+\label{subsec:justificativa}
+A proposta do Figma como sistema é tranformar o fluxo de design para algo mais colaborativo. Em outros sistemas, o design e prototipação são desenvolvidos localmente e de forma individual, o que pode causar demora na comunicação e dificuldade no compartilhamento de arquivos atualizados. \\
+
+Como o Figma é uma plataforma online e colaborativa que possui ferramentas de design, prototipação e codificação em aoenas um sistema, é possível que toda a equipe tenha uma visão do trabalho em tempo real e feedbacks mais rápidos do que deve ser feito e modificado, o que diminui o risco de desententimentos internos e externos entre equipes e aumento na produtividade geral.
+
+\vspace{1cm}
+
+% ----------------------------------
+
+\subsection{Público-alvo}
+\label{subsec:publico}
+O público-alvo do Figma é composto principalmente por:
+\begin{itemize}
+    \item Designers de interface (UI/UX), que criam interfaces e protótipos para sistemas;
+    \item Times de desenvolvimento, que podem utilizar as ferramentas para validar ideias, acompanhar o desenvolvimento do sistema e colaborar entre si;
+    \item Profissionais de marketing e branding, que usam das vastas ferramentas para criar e publicar suas ideias;
+    \item Educadores e estudantes, que utilizam o Figma como ferramenta de apoio no aprendizado em design;
+    \item Desenvolvedores, que se beneficiam de uma plataforma simplificada e versátil para a implementação visual dos sistemas;
+\end{itemize}
+
+\newpage
+% ----------------------------------------------------------------------------------------
+
+% ACESSO AO SISTEMA %
+
+% ----------------------------------------------------------------------------------------
+
+\section{Acesso ao Sistema}
+\label{sec:acesso}
+
+Abaixo está a tela inicial do Figma:
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_inicial.png}
+    \caption{Tela inicial do Figma}
+    \label{fig:tela_inicial}
+\end{figure}
+
+Em caso de primeiro uso em um dispositivo, é preciso fazer o Cadastro (\autoref{subsec:cadastro}) ou Login (\autoref{subsec:login}) de uma conta para acessá-lo. Nesta seção, será demonstrado as diversas formas de como este acesso pode ser realizado.
+
+\vspace{1cm}
+
+% ----------------------------------
+
+\subsection{Cadastro de conta}
+\label{subsec:cadastro}
+
+\subsubsection{Guia rápido}
+\label{subsec:signup_rapido}
+
+\begin{enumerate}
+    \item Acesse o site \url{https://www.figma.com};
+    \item Clique em \textit{Get started for Free} (\autoref{fig:tela_inicial_signup});
+    \item Informe seu e-mail e senha ou utilize cadastro via Google (\autoref{fig:tela_signup});
+    \item Confirme o e-mail enviado pelo Figma.
+\end{enumerate}
+
+\vspace{0.2cm}
+
+\subsubsection{Passo a passo}
+\label{subsubsec:signup_passoapasso}
+
+Para fazer uma nova conta no Figma, é preciso apertar o botão \textit{Get started for Free}, indicado abaixo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_inicial_signup.png}
+    \caption{Botão pode ser encontrado no canto superior direito da tela}
+    \label{fig:tela_inicial_signup}
+\end{figure}
+
+\vspace{0.2cm}
+
+Após apertar no botão de cadastro, uma janela pop-up aparecerá para escolher entre o cadastro de e-mail e cadastro google (\autoref{fig:tela_signup})
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_signup.png}
+    \caption{Opções de cadastro}
+    \label{fig:tela_signup}
+\end{figure}
+
+\vspace{0.2cm}
+
+Para criar uma conta usando o seu e-mail, digite no campo indicado o e-mail que será usado no cadastro
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_signup_email.png}
+    \caption{Após digitar seu e-mail, aperte o botão \textit{Continue with e-mail}}
+    \label{fig:tela_signup_email}
+\end{figure}
+
+\vspace{0.2cm}
+
+Após isso, será solicitado que você escolha uma senha e, novamente, aperte no botão para continuar
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_signup_senha.png}
+    \caption{Aperte o botão \textit{Create account}}
+    \label{fig:tela_signup_senha}
+\end{figure}
+
+\vspace{0.2cm}
+
+Após isso, será enviado um e-mail para seu correio eletônico com as informações necessárias para continuar seu cadastro. É preciso que você confirme e siga os passos dados no e-mail.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_email.png}
+    \caption{Aperte o botão \textit{Log in to Figma}}
+    \label{fig:tela_email}
+\end{figure}
+
+\vspace{0.2cm}
+
+% ----------------------------------
+
+\subsection{Fazer login}
+\label{subsec:login}
+
+\subsubsection{Guia rápido}
+\label{subsec:login_rapido}
+
+\begin{enumerate}
+    \item Acesse o site \url{https://www.figma.com};
+    \item Clique em \textit{Log in} (\autoref{fig:tela_inicial_login});
+    \item Informe seu e-mail e senha ou utilize login via Google (\autoref{fig:tela_login});
+\end{enumerate}
+
+\vspace{0.2cm}
+
+\subsubsection{Passo a passo}
+\label{subsubsec:login_passoapasso}
+
+Primeiramente, aperte o botão \textit{Log in} indicado na imagem abaixo (\autoref{fig:tela_inicial_login}):
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_inicial_login.png}
+    \caption{Aperte o botão \textit{Log in}}
+    \label{fig:tela_inicial_login}
+\end{figure}
+
+Preencha os dados corretos e aperte novamente no botão \textit{Log in}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_login.png}
+    \caption{Aperte o botão \textit{Log in}}
+    \label{fig:tela_login}
+\end{figure}
+
+% ----------------------------------
+
+\subsection{Pré-requisitos de acesso}
+\label{subsec:requisitos}
+
+Para acessar o Figma, é necessário:
+\begin{enumerate}
+    \item Estar em ambiente \href{https://pt.wikipedia.org/wiki/Computador_de_escrit%C3%B3rio}{\textit{desktop}} e
+    \item Ter uma conta cadastrada e verificada;
+\end{enumerate}
+
+É possível visualizar projetos e protótipos em ambientes \href{https://pt.wikipedia.org/wiki/Telefone_celular}{\textit{mobile}}, mas a edição é exclusivamente otimizada para \href{https://pt.wikipedia.org/wiki/Computador_de_escrit%C3%B3rio}{\textit{desktop}}.
+
+% ----------------------------------------------------------------------------------------
+
+% INTERFACE %
+
+% ----------------------------------------------------------------------------------------
+
+\section{Visão Geral da Interface}
+\label{sec:interface_geral}
+
+A tela inicial do Figma pode ser vista abaixo:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_principal.png}
+    \caption{Tela inicial do sistema}
+    \label{fig:tela_principal}
+\end{figure}
+
+Será demonstrado abaixo na \autoref{subsec:interface_principais_areas} todas as funcionalidades desta tela.
+
+\subsection{Principais áreas da tela}
+\label{subsec:interface_principais_areas}
+
+Pode-se separar a tela inicial em 4 blocos principais vistos na imagem abaixo (\autoref{fig:tela_cores}),
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_cores.png}
+    \caption{Blocos importantes de ações na tela inicial}
+    \label{fig:tela_cores}
+\end{figure}
+
+\vspace{0.2cm}
+
+sendo:
+\begin{enumerate}
+    \item Opções de conta e comunidade;
+    \item \label{it:segundo} Ferramentas de criação de arquivos;
+    \item Listagem de arquivos e protótipos criados;
+    \item Opções de equipe. \\
+\end{enumerate}
+\vspace{0.2cm}
+
+Cada ferramenta de criação possuem seu próprio layout, que serão explicados na \autoref{subsec:menus_elementos} abaixo.
+
+\subsection{Menus, botões e elementos importantes}
+\label{subsec:menus_elementos}
+
+Ao escolher uma das Ferramentas de criação do \autoref{it:segundo}, é aberta uma nova janela com um novo layout  de acordo com a ferramenta escolhida, será apresentado cada uma destas opções abaixo:
+
+% ----------------------------------
+
+\subsubsection{Figma Design}
+\label{subsubsec:menu_design}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design.png}
+    \caption{Blocos importantes de ações no Figma Design}
+    \label{fig:tela_design}
+\end{figure}
+
+Neste layout, existem os seguintes blocos:
+\begin{enumerate}
+    \item Opções de informações do arquivo;
+    \item Opções de camadas do arquivo;
+    \item Tela principal para manipulação dos recursos de design;
+    \item Ferramentas de criação de recursos gráficos;
+    \item Opções de colaboração;
+    \item Opções do objeto selecionado.
+\end{enumerate}
+\vspace{0.2cm}
+
+% ----------------------------------
+
+\subsubsection{FigJam}
+\label{subsubsec:menu_figjam}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_jam.png}
+    \caption{Blocos importantes de ações no FigJam}
+    \label{fig:tela_jam}
+\end{figure}
+
+Neste layout, existem os seguintes blocos:
+\begin{enumerate}
+    \item Opções de informações do arquivo;
+    \item Opções de colaboração;
+    \item Tela principal para manipulação de objetos;
+    \item Ferramenta de criação dos objetos.
+\end{enumerate}
+\vspace{0.2cm}
+
+% ----------------------------------
+
+\subsubsection{Figma Slides}
+\label{subsubsec:menu_slides}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_slides.png}
+    \caption{Blocos importantes de ações no Figma Slides}
+    \label{fig:tela_slides}
+\end{figure}
+
+Neste layout, existem os seguintes blocos:
+\begin{enumerate}
+    \item Opções de informações do arquivo;
+    \item Opções de manipulação de ordem e criação de slides;
+    \item Tela principal para manipulação do slide escolhido;
+    \item Ferramentas de criação de objetos para o slide;
+    \item Opções de colaboração;
+    \item Opções do objeto selecionado.
+\end{enumerate}
+\vspace{0.2cm}
+
+% ----------------------------------
+
+\subsubsection{Figma Buzz}
+\label{subsubsec:menu_buzz}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_buzz.png}
+    \caption{Blocos importantes de ações no Figma Buzz}
+    \label{fig:tela_buzz}
+\end{figure}
+
+Neste layout, existem os seguintes blocos:
+\begin{enumerate}
+    \item Opções de informações do arquivo;
+    \item Ferramentas de criação de recursos gráficos;
+    \item Tela principal para manipulação dos recursos de design;
+    \item Opções de troca de modos de uso (visualização, edição, comentários, desenvolvimento)
+    \item Opções de colaboração;
+\end{enumerate}
+\vspace{0.2cm}
+
+% ----------------------------------
+
+\subsubsection{Figma Sites}
+\label{subsubsec:menu_sites}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_sites.png}
+    \caption{Blocos importantes de ações no Figma Slides}
+    \label{fig:tela_sites}
+\end{figure}
+
+Neste layout, existem os seguintes blocos:
+\begin{enumerate}
+    \item Opções de informações e camadas do arquivo;
+    \item Opções de configurações do arquivo (database, telas, pesquisa, etc.);
+    \item Tela principal para manipulação dos recursos;
+    \item Ferramentas de criação de recursos gráficos;
+    \item Opções de colaboração;
+    \item Opções do objeto selecionado.
+\end{enumerate}
+\vspace{0.2cm}
+
+% ----------------------------------
+
+\subsubsection{Figma Make}
+\label{subsubsec:menu_make}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_make.png}
+    \caption{Tela inicial do Figma Make}
+    \label{fig:tela_make}
+\end{figure}
+
+É preciso primeiramente enviar o que será gerado ao Figma, após enviar as especificações, abre-se uma janela com um layout similar aos demais:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_make_blocos.png}
+    \caption{Blocos importantes na tela do Figma Make}
+    \label{fig:tela_make_blocos}
+\end{figure}
+
+Neste layout, existem os seguintes blocos:
+\begin{enumerate}
+    \item \href{https://pt.wikipedia.org/wiki/Chatbot}{Chatbot interativo};
+    \item Opções de visualização;
+    \item Tela principal para visualiação do objeto gerado;
+    \item Opções de colaboração.
+\end{enumerate}
+\vspace{0.2cm}
+
+
+% ----------------------------------------------------------------------------------------
+
+% FUNCIONALIDADES %
+
+% ----------------------------------------------------------------------------------------
+
+\section{Principais Funcionalidades}
+\label{sec:funcionalidades}
+
+Após apresentar as principais telas do sistema, é preciso entender as suas principais funcionalidades. Por ser um sistema com diversas funcionalidades para suas várias ferramentas, será apresentado as principais funcionalidades da ferramenta mais desenvonvida e utilizada no Figma, o Figma Design (layout pode ser visto na \autoref{fig:tela_design})
+
+% ----------------------------------
+
+\subsection{Criar um novo arquivo de design}
+\label{subsec:criar_design}
+
+\textbf{Passo a passo}
+\begin{enumerate}
+    \item Na tela inicial, clique em \textit{Design} (Segundo botão, da esquerda para a direita, do bloco 2 da \autoref{fig:tela_cores});
+    \item Aguarde o carregamento do editor;
+    \item Renomeie o arquivo clicando no título no topo. (Bloco 1 na \autoref{fig:tela_design}).
+\end{enumerate}
+
+% ----------------------------------
+
+\subsection{Criar um novo frame}
+\label{subsec:criar_frame}
+
+\textbf{Passo a passo}
+\begin{enumerate}
+    \item Clique no ícone de \textit{Frame} (Segundo botão da esquerda para a direita da \autoref{fig:tela_design}, localizado no bloco 4);
+    \item Escolha um tamanho predefinido no bloco 6 (por exemplo, iPhone 16);
+    \item Irá ser criado um frame que será utilizado para a prototipação, todos os objetos em um mesmo frame aparecerão em uma mesma tela (\autoref{fig:tela_design_blocos}).
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design_frame.png}
+    \caption{Criação de um frame}
+    \label{fig:tela_design_blocos}
+\end{figure}
+
+% ----------------------------------
+
+\subsection{Prototipar interações}
+\label{subsec:criar_interacoes}
+
+\textbf{Passo a passo}
+\begin{enumerate}
+    \item Abra a aba \textit{Protótipo} (visto no Bloco 6 da \autoref{fig:tela_design});
+    \item Clique no botão interações;
+    \item Selecione qual o gatilho da interação, sua ação e destino;
+    \item Defina a animação e o comportamento no painel direito.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design_prototipo.png}
+    \caption{Etapa de prototipação de interação entre telas}
+    \label{fig:tela_design_prototipo}
+\end{figure}
+
+% ----------------------------------
+
+\subsection{Adicionar um objeto no frame}
+\label{subsec:criar_objeto}
+
+\textbf{Passo a passo}
+\begin{enumerate}
+    \item Clique no ícone de objeto (Terceiro botão da esquerda para a direita da \autoref{fig:tela_design}, localizado no bloco 4);
+    \item Escolha um objeto para criá-lo (por exemplo, retângulo);
+    \item Irá ser criado um objeto, que pode ter suas propriedades editadas posteriormente (\autoref{fig:tela_design_objeto}).
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design_objeto.png}
+    \caption{Criação de objeto}
+    \label{fig:tela_design_objeto}
+\end{figure}
+
+% ----------------------------------
+
+\subsection{Editar um objeto no arquivo}
+\label{subsec:editar_objeto}
+
+\textbf{Passo a passo}
+\begin{enumerate}
+    \item Clique objeto desejado;
+    \item Escolha as propriedades que deseja modificar (Bloco 6 na \autoref{fig:tela_design});
+    \item Ao apertar \textit{enter}, o objeto será modificado.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design_editar.png}
+    \caption{Edição de objeto}
+    \label{fig:tela_design_editar}
+\end{figure}
+
+% ----------------------------------
+
+\subsection{Comentar em algum objeto}
+\label{subsec:criar_comentário}
+
+\textbf{Passo a passo}
+\begin{enumerate}
+    \item Clique no ícone de comentário (Sexto botão da esquerda para a direita da \autoref{fig:tela_design}, localizado no bloco 4);
+    \item Escolha um objeto comentar;
+    \item Irá ser criado um comentário, visível para todos que tem acesso ao arquivo (\autoref{fig:tela_design_comentario})
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design_comentario.png}
+    \caption{Criação de comentário}
+    \label{fig:tela_design_comentario}
+\end{figure}
+
+% ----------------------------------
+
+\subsection{Desenhar no arquivo}
+\label{subsec:criar_desenho}
+
+\textbf{Passo a passo}
+\begin{enumerate}
+    \item Clique no ícone de comentário (Sexto botão da esquerda para a direita da \autoref{fig:tela_design}, localizado no bloco 4);
+    \item Escolha a ferramenta de desenho;
+    \item Desenhe o que desejar no \textit{canvas}(\autoref{fig:tela_design_desenho}).
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design_desenho.png}
+    \caption{Criação de desenho}
+    \label{fig:tela_design_desenho}
+\end{figure}
+
+% ----------------------------------
+
+\subsection{Compartilhar o link para visualização}
+\label{subsec:compartilhar_design}
+
+\textbf{Passo a passo}
+\begin{enumerate}
+    \item Clique no ícone Compartilhar (Terceiro botão da esquerda para a direita da \autoref{fig:tela_design}, localizado no bloco 5);
+    \item Escolha se deseja compartilhar por e-mail ou link (\autoref{fig:tela_design_compartilhar}).
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design_compartilhar.png}
+    \caption{Menu de compartilhamento}
+    \label{fig:tela_design_compartilhar}
+\end{figure}
+
+% ----------------------------------
+
+\subsection{Mover o arquivo para uma equipe}
+\label{subsec:mover_design}
+
+\textbf{Passo a passo}
+\begin{enumerate}
+    \item No menu de compartilhamento (\autoref{fig:tela_design_compartilhar}), clique em Mover Arquivo;
+    \item Escolha qual equipe você deseja mover o arquivo (\autoref{fig:tela_design_mover}) e clique em "mover";
+    \item O arquivo será movido para a pasta da equipe e todos os participantes podem colaborar nele.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design_mover.png}
+    \caption{Escolha de equipe}
+    \label{fig:tela_design_mover}
+\end{figure}
+
+% ----------------------------------
+
+\subsection{Deletar o arquivo}
+\label{subsec:deletar_design}
+
+\textbf{Passo a passo}
+\begin{enumerate}
+    \item Na tela inicial (\autoref{fig:tela_principal}), selecione o arquivo que deseja apagar;
+    \item Clique com o botão direito do mouse e escolha a opção "mover para a lixeira" e confirme sua ação;
+    \item O arquivo será movido para a lixeira da equipe que foi criada. Para acessá-la, aperte em "lixeira" (Quinto botão de cima para baixo do bloco 4, visto na \autoref{fig:tela_cores})
+    \item Irá ser criado um objeto, que pode ter suas propriedades editadas posteriormente (\autoref{fig:tela_design_objeto})
+    \item Ao localizar o arquivo na lixeira, clique com o botão direito do mouse e escolha a opção "excluir permanentemente";
+    \item O arquivo será exlcluído permanentemente e não pode ser recuperado.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics{imagens/tela_design_excluir_permanentemente.png}
+    \caption{Opções na lixeira}
+\label{fig:tela_design_excluir_permanentemente}
+\end{figure}
+
+% ----------------------------------
+
+\end{document}
