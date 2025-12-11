@@ -64,7 +64,7 @@
 O escopo deste plano de teste cobre ações feitas no Figma Design, como:
 \begin{itemize}
     \item Criação e edição de arquivos;
-    \item Manipulação de frames e objetos;
+    \item Manipulação de \textit{frames} e objetos;
     \item Prototipação;
     \item Comentários;
     \item Movimentação e exclusão de arquivos;
@@ -76,7 +76,7 @@ O escopo deste plano de teste cobre ações feitas no Figma Design, como:
 \subsubsection*{Fora do Escopo}
 \label{subsec:foraescopo_teste}
 \begin{itemize}
-    \item Uso de plugins ou integrações externas;
+    \item Uso de \textit{plugins} ou integrações externas;
     \item Funcionalidades de exportação;
     \item Outras ferramentas do Figma.
 \end{itemize}
@@ -107,15 +107,15 @@ Cada caso de teste possui pré-condições, resultados esperados e passos de exe
 \hline
 \textbf{ID} & \textbf{Objetivo} & \textbf{Pré-condições} & \textbf{Resultado Esperado} \\ \hline
 CT1 & Criar um novo arquivo de design & Usuário autenticado, tela inicial carregada & Novo arquivo visível na lista de arquivos \\ \hline
-CT2 & Criar um novo frame & Arquivo de design aberto & Frame criado corretamente \\ \hline
-CT3 & Prototipar interações & Frame com objetos & Interações aplicadas corretamente \\ \hline
-CT4 & Adicionar objeto no frame & Frame criado & Objeto aparece no frame \\ \hline
-CT5 & Editar objeto no arquivo & Objeto existente selecionado & Objeto alterado conforme propriedades escolhidas \\ \hline
-CT6 & Comentar em algum objeto & Objeto existente selecionado & Comentário visível para todos usuários \\ \hline
-CT7 & Desenhar no arquivo & Editor aberto & Desenho aparece corretamente no canvas \\ \hline
-CT8 & Compartilhar link para visualização & Arquivo criado & Link ou permissão de visualização funcionando \\ \hline
-CT9 & Mover arquivo para uma equipe & Arquivo criado & Arquivo movido para pasta da equipe correta \\ \hline
-CT10 & Deletar arquivo & Arquivo criado & Arquivo enviado para lixeira e deletado permanentemente \\ \hline
+CT2 & Criar um novo \textit{frame} & Usuário autenticado, Arquivo de design existente, Arquivo de design aberto & \textit{Frame} criado corretamente \\ \hline
+CT3 & Prototipar interações & Usuário autenticado, Arquivo de design existente, Arquivo de design aberto, Ao menos dois \textit{frames} & Interações aplicadas corretamente \\ \hline
+CT4 & Adicionar objeto no \textit{frame} & Usuário autenticado, Arquivo de design existente, Arquivo de design aberto, Ao menos um \textit{frame} criado & Objeto aparece no \textit{frame} \\ \hline
+CT5 & Editar objeto no arquivo & Usuário autenticado, Arquivo de design existente, Arquivo de design aberto, Ao menos um objeto existente & Objeto alterado conforme propriedades escolhidas \\ \hline
+CT6 & Comentar em algum \textit{frame} ou objeto & Usuário autenticado, Arquivo de design existente, Arquivo de design aberto, Ao menos um \textit{frame} ou objeto existente selecionado & Comentário visível para todos usuários \\ \hline
+CT7 & Desenhar no arquivo & Usuário autenticado, Arquivo de design existente, Arquivo de design aberto & Desenho aparece corretamente no \textit{canvas} \\ \hline
+CT8 & Compartilhar link para visualização & Usuário autenticado, Arquivo de design existente, Arquivo de design aberto & Link ou permissão de visualização funcionando \\ \hline
+CT9 & Mover arquivo para uma equipe & Usuário autenticado, Arquivo de design existente, Arquivo de design aberto & Arquivo movido para pasta da equipe correta \\ \hline
+CT10 & Deletar arquivo & Usuário autenticado, Arquivo de design existente, Arquivo de design aberto & Arquivo enviado para lixeira e deletado permanentemente \\ \hline
 \end{longtable}
 
 % ----------------------------------
@@ -131,14 +131,14 @@ CT10 & Deletar arquivo & Arquivo criado & Arquivo enviado para lixeira e deletad
 
 \begin{itemize}
     \item Usuário autenticado no Figma;
-    \item Tela inicial carregada corretamente.
+    \item Tela inicial carregada.
 \end{itemize}
 
 \textbf{Passos a passo}
 
 \begin{enumerate}
     \item Clique no botão \textit{Design} na tela inicial (\autoref{fig:tela_principal});
-    \item Aguarde o carregamento do editor, e o arquivo será criado.
+    \item Aguarde o carregamento do editor, e o arquivo será criado. \\
 \end{enumerate}
 
 
@@ -169,12 +169,12 @@ O Figma cria um novo arquivo de design na lista de arquivos do usuário.
 \begin{enumerate}
     \item Clique no ícone de \textit{Frame};
     \item Escolha um tamanho predefinido (ex.: iPhone 16);
-    \item Confirme a criação do frame. \\
+    \item Confirme a criação do \textit{frame}. \\
 \end{enumerate}
 
 \textbf{Resultado esperado} \\
 \vspace{0.2cm}
-O frame é criado corretamente e aparece no painel de camadas.
+O \textit{frame} é criado corretamente e aparece no painel de camadas.
 
 \begin{figure}[H]
     \centering
@@ -288,7 +288,7 @@ Objeto alterado conforme as propriedades escolhidas.
     \item Usuário autenticado no Figma;
     \item Arquivo de design existente;
     \item Arquivo de design aberto;
-    \item Ao menos um frame ou objeto existente.
+    \item Ao menos um \textit{frame} ou objeto existente.
 \end{itemize}
 
 
@@ -348,6 +348,7 @@ Desenhos aparecem corretamente no \textit{canvas} como vetores.
 \textbf{Pré-condições}
 \begin{itemize}
     \item Usuário autenticado no Figma;
+    \item Arquivo de design existente;
     \item Arquivo de design aberto.
 \end{itemize}
 
