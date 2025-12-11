@@ -7,12 +7,9 @@ Este repositório contém a documentação de um **Plano de Testes** e o **Manua
 
 # Sumário
 
-- [Documentação do Projeto — Manual de Uso e Plano de Testes](#-documentação-do-projeto--manual-de-uso-e-plano-de-testes)
 - [Estrutura do Repositório](#estrutura-do-repositório)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Descrição dos Documentos](#descrição-dos-documentos)
-  - [Manual de Uso do Sistema (`manual-de-uso.tex`)](#manual-de-uso-do-sistema-manual-de-uso-tex)
-  - [Plano de Teste (`plano-de-teste.tex`)](#plano-de-teste-plano-de-teste-tex)
 
 
 ## Estrutura do Repositório
