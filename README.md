@@ -1,4 +1,4 @@
-# 📘 Documentação do Projeto — Manual de Uso e Plano de Testes
+# 📘 Desafio de Documentação e Teste — Manual de Uso e Plano de Testes
 ![Last Update](https://img.shields.io/github/last-commit/flavia-segadilha/Desafio-Documentacao_e_Teste)
 ![Repo Size](https://img.shields.io/github/repo-size/flavia-segadilha/Desafio-Documentacao_e_Teste)
 ![Language](https://img.shields.io/badge/linguagem-LaTeX-orange)
